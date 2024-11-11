@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "perezsoto.alejandro.pmdmtarea02"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "perezsoto.alejandro.pmdmtarea02"
