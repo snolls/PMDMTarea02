@@ -6,9 +6,9 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="perezsoto.alejandro.pmdmtarea02.HomeFragment"
+        android:name="perezsoto.alejandro.pmdmtarea02.SuperMarioFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_super_mario" />
     <fragment
         android:id="@+id/detailsFragment"
         android:name="perezsoto.alejandro.pmdmtarea02.DetailsFragment"

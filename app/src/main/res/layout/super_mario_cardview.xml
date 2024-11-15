@@ -12,12 +12,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:gravity="start"
+            android:orientation="horizontal"
             android:padding="10dp">
             <ImageView
+                android:id="@+id/iVSuperMario"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_launcher_background"
+                />
+            <TextView
+                android:id="@+id/tVSuperMario"
+                android:text="@string/tVSuperMario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
 
         </LinearLayout>
 
