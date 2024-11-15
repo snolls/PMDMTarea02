@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="perezsoto.alejandro.pmdmtarea02.SuperMarioFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_super_mario" />
+    app:startDestination="@id/superMarioFragment">
     <fragment
         android:id="@+id/detailsFragment"
         android:name="perezsoto.alejandro.pmdmtarea02.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/superMarioFragment"
+        android:name="perezsoto.alejandro.pmdmtarea02.SuperMarioFragment"
+        android:label="fragment_super_mario"
+        tools:layout="@layout/fragment_super_mario" />
 </navigation>

@@ -38,8 +38,8 @@ public class SuperMarioFragment extends Fragment {
         loadPJ();
 
         // Configurar el RecyclerView
-        adapter = new SuperMarioViewAdapter(data, getContext());
-        binding.recyclerViewSuperMario.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new SuperMarioViewAdapter(data, requireContext());
+        binding.recyclerViewSuperMario.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.recyclerViewSuperMario.setAdapter(adapter);
 
     }
