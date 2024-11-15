@@ -24,8 +24,6 @@ public class SuperMarioFragment extends Fragment {
     private SuperMarioViewAdapter adapter;
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,14 +46,24 @@ public class SuperMarioFragment extends Fragment {
 
     private void loadPJ() {
         data = new ArrayList<>();
-        data.add(new SuperMarioData(R.drawable.mario,"Mario Mario",
-                "es el protagonista de la serie de videojuegos Super Mario y la mascota " +
-                        "de Nintendo. Fue creado por Shigeru Miyamoto en 1981 " +
-                        "e hizo su primera aparición en el videojuego arcade Donkey Kong. " +
-                        "Es un fontanero estadounidense de origen italiano que actualmente vive en " +
-                        "el Reino Champiñón. Como el héroe que es, se encarga de salvar a la gente, " +
-                        "especialmente a la Princesa Peach, a quien ha salvado muchísimas veces de las " +
-                        "garras del temible Bowser, quien es su archi-enemigo","La habilidad más " +
+        data.add(new SuperMarioData(R.drawable.mario,
+                "Mario Mario",
+                "Mario (anteriormente conocido como Jumpman, y desarrollado bajo el " +
+                        "sobrenombre Sr. Video), es la mascota de Nintendo y el protagonista " +
+                        "principal de la franquicia de Mario. Mario hizo su primera aparición como " +
+                        "el protagonista del juego de arcade Donkey Kong, lanzado en 1981. Desde " +
+                        "Super Mario Bros., sus habilidades han sido sus poderes de saltos y pisotones, " +
+                        "con los que derrota a la mayoría de sus enemigos; y su habilidad para ganar " +
+                        "poderes con una plétora de elementos, como el Súper Champiñon, la Flor de " +
+                        "Fuego y la Súper Estrella. Los juegos generalmente han retratado a Mario " +
+                        "como un personaje silencioso sin una personalidad distinta (Fortune Street " +
+                        "es una excepción notable). De acuerdo con la filosofía de Nintendo, esto " +
+                        "permite que Mario encaje en muchos géneros y roles diferentes. En la mayoría " +
+                        "de los juegos, es el héroe que va en una aventura para salvar a la Princesa " +
+                        "Peach de su archienemigo, Bowser, pero se le ha mostrado realizando muchas " +
+                        "otras actividades además de aventurarse, como competir y hacer deportes con " +
+                        "su hermano gemelo menor y otros.",
+                "La habilidad más " +
                 "notable de Mario es su Salto, que es su movimiento básico en el que confía " +
                 "para derrotar a los enemigos, evitar obstáculos y activar objetos útiles como " +
                 "Bloques e Interruptores P. Aunque Luigi tiene saltos superiores, Mario es más " +
