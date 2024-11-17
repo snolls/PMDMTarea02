@@ -34,6 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         Item item = this.itemList.get(position);
+        System.out.println(item.getName());
         Log.d("MyAdapter", "Binding item: " + item.getName());
         holder.bind(item);
 
