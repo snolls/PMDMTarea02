@@ -1,6 +1,7 @@
 package perezsoto.alejandro.pmdmtarea02;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -33,6 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         Item item = this.itemList.get(position);
+        Log.d("MyAdapter", "Binding item: " + item.getName());
         holder.bind(item);
 
         /*holder.itemView.setOnClickListener(view -> {

@@ -26,7 +26,7 @@ public class MainFragment extends Fragment {
 
         // Crear algunos datos de ejemplo
         itemList = new ArrayList<>();
-        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Title 1",R.drawable.ic_launcher_background , "Description 1", "Abilities 1"));
         itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
 
         // Configurar el RecyclerView
@@ -34,7 +34,8 @@ public class MainFragment extends Fragment {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.recyclerView.setAdapter(adapter);
 
-        return root;
+        return binding.getRoot();
+
     }
 
     @Override
