@@ -14,7 +14,6 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(Item item) {
         binding.image.setImageResource(item.getImage());
-        binding.name.setText(item.getName());
-        binding.executePendingBindings();
+        binding.tvname.setText(item.getName());
     }
 }

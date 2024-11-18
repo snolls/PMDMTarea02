@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detalisFragment"
-        android:name="perezsoto.alejandro.pmdmtarea02.DetailaFragment"
+        android:name="perezsoto.alejandro.pmdmtarea02.DetailsFragment"
         android:label="fragment_detalis"
         tools:layout="@layout/fragment_detalis" />
 </navigation>

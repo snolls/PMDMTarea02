@@ -10,33 +10,31 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import perezsoto.alejandro.pmdmtarea02.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    private AppBarConfiguration appBarConfiguration;
+
+    private ActivityMainBinding binding;
+    private NavHostFragment navHostFragment;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         setSupportActionBar(binding.toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        navController = navHostFragment.getNavController();
+
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration);
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this,R.id.nav_host_fragment);
-        return navController.navigateUp() || super.onSupportNavigateUp();
-    }
-
-    public void itemClicked(Item item, View view) {
-    }
 }
