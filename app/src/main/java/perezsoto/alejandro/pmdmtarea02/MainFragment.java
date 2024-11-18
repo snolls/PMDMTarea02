@@ -32,25 +32,38 @@ public class MainFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
-
-        NavHostFragment navHostFragment= (NavHostFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-        navController = navHostFragment.getNavController();
-        return view;
+        binding = FragmentMainBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         // Crear algunos datos de ejemplo
-        itemList = new ArrayList<>();
-        itemList.add(new Item("Title 1",R.drawable.ic_launcher_background , "Description 1", "Abilities 1"));
-        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
+
+        createData();
+
         // Configurar el RecyclerView
         MyAdapter adapter = new MyAdapter(itemList,navController);
-        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.recyclerView.setAdapter(adapter);
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+    }
+
+
+    private void createData() {
+
+        itemList = new ArrayList<>();
+        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
+        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
+        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
+        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
+
     }
 
     @Override

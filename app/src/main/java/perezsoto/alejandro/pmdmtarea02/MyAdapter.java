@@ -45,7 +45,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("itemList", itemList );
 
-                navController.navigate(R.id.action_mainFragment_to_detalisFragment, bundle);
+                navController.navigate(R.id.action_mainFragment_to_detailsFragment, bundle);
 
             }
         });

@@ -11,12 +11,12 @@
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainFragment_to_detalisFragment"
-            app:destination="@id/detalisFragment" />
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detalisFragment"
+        android:id="@+id/detailsFragment"
         android:name="perezsoto.alejandro.pmdmtarea02.DetailsFragment"
-        android:label="fragment_detalis"
-        tools:layout="@layout/fragment_detalis" />
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
 </navigation>
