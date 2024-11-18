@@ -36,19 +36,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         Item item = this.itemList.get(position);
-        holder.bind(item);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("itemList", itemList );
-
-                navController.navigate(R.id.action_mainFragment_to_detailsFragment, bundle);
-
-            }
-        });
+        holder.bind(item,navController);
 
 
     }

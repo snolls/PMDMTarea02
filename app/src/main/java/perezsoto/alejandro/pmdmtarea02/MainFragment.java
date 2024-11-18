@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -46,23 +47,24 @@ public class MainFragment extends Fragment {
         createData();
 
         // Configurar el RecyclerView
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
         MyAdapter adapter = new MyAdapter(itemList,navController);
         binding.recyclerView.setAdapter(adapter);
-        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
     }
 
 
     private void createData() {
 
         itemList = new ArrayList<>();
-        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
-        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
-        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
-        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
-        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
-        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
-        itemList.add(new Item("Title 1",R.drawable.mario , "Description 1", "Abilities 1"));
-        itemList.add(new Item("Title 2",R.drawable.luigi, "Description 2", "Abilities 2"));
+        itemList.add(new Item("Mario Mario",R.drawable.mario , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Luigi Mario",R.drawable.luigi, "Description 2", "Abilities 2"));
+        itemList.add(new Item("Princesa Peach",R.drawable.peach , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Yoshi",R.drawable.yoshi, "Description 2", "Abilities 2"));
+        itemList.add(new Item("Toad",R.drawable.toad , "Description 1", "Abilities 1"));
+        itemList.add(new Item("Waluigi",R.drawable.waluigi, "Description 2", "Abilities 2"));
+        itemList.add(new Item("Warrio",R.drawable.warrio , "Description 1", "Abilities 1"));
 
     }
 
