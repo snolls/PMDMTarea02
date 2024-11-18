@@ -69,7 +69,7 @@ public class MainFragment extends Fragment {
     private void createData() {
 
         itemList = new ArrayList<>();
-        itemList.add(new Item("Mario Mario", R.drawable.mario, "Description 1", "Abilities 1"));
+        itemList.add(new Item(getString(R.string.mario_name), R.drawable.mario, getString(R.string.description_mario), getString(R.string.abilities_mario)));
         itemList.add(new Item("Luigi Mario", R.drawable.luigi, "Description 2", "Abilities 2"));
         itemList.add(new Item("Princesa Peach", R.drawable.peach, "Description 1", "Abilities 1"));
         itemList.add(new Item("Yoshi", R.drawable.yoshi, "Description 2", "Abilities 2"));

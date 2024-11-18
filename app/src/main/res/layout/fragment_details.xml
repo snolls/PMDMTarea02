@@ -14,7 +14,8 @@
             android:id="@+id/imageViewDetails"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:scaleType="centerCrop"
+            android:layout_margin="5dp"
+            android:scaleType="centerInside"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -24,7 +25,7 @@
             android:id="@+id/nameViewDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             app:layout_constraintTop_toBottomOf="@id/imageViewDetails"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,25 +34,52 @@
 
         <!-- Descripción -->
         <TextView
+            android:id="@+id/descriptiontv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/descripcionTV"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintTop_toBottomOf="@id/nameViewDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/DetailsFragmentStyle"
+            />
+        <TextView
             android:id="@+id/descriptionViewDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            app:layout_constraintTop_toBottomOf="@id/nameViewDetails"
+            app:layout_constraintTop_toBottomOf="@id/descriptiontv"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/DetailsFragmentBodyStyle"/>
 
         <!-- Habilidades -->
+        <TextView
+            android:id="@+id/abilitiestv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/abilitiesTV"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintTop_toBottomOf="@id/descriptionViewDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/DetailsFragmentStyle"
+            />
+
         <TextView
             android:id="@+id/abilitiesViewDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            app:layout_constraintTop_toBottomOf="@id/descriptionViewDetails"
+            app:layout_constraintTop_toBottomOf="@id/abilitiestv"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/DetailsFragmentBodyStyle"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

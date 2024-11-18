@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">PMDMTarea02</string>
     <string name="about">About..</string>
+    <string name="abilitiesTV">Habilidades</string>
+    <string name="descripcionTV">Descripción</string>
 </resources>
