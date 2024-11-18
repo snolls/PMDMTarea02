@@ -1,9 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.PMDMTarea02" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#FF0000</item> <!-- Rojo -->
+        <item name="colorPrimaryVariant">#B20000</item> <!-- Variante del rojo -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- Texto blanco -->
+
+        <!-- Icono animado en el SplashScreen -->
+        <!-- Duración de la animación -->
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+        <!-- Color de fondo del icono -->
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/red</item>
+        <!-- Color de fondo del SplashScreen -->
+        <item name="android:windowSplashScreenBackground">@color/red</item>
+
+
+
     </style>
+
+
 
     <style name="Theme.PMDMTarea02" parent="Base.Theme.PMDMTarea02" />
 </resources>

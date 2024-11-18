@@ -6,14 +6,6 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
     </style>
-
-    <!-- Estilo personalizado para la Toolbar -->
-    <style name="CustomToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:background">@color/red</item> <!-- Fondo rojo -->
-        <item name="android:titleTextColor">@android:color/white</item> <!-- Texto blanco -->
-        <item name="android:subtitleTextColor">@android:color/white</item> <!-- Subtítulos blancos -->
-    </style>
-
     <!-- Estilo para el nombre en el DetailsFragment -->
     <style name="DetailsFragmentNameStyle">
         <item name="android:textSize">24sp</item>

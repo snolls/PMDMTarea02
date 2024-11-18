@@ -41,6 +41,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui:2.8.4")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
     implementation("androidx.palette:palette:1.0.0")
 

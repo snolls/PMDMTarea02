@@ -1,11 +1,11 @@
 package perezsoto.alejandro.pmdmtarea02;
 
 
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,10 +29,16 @@ public class DetailsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        
         // Obtener los datos del Bundle
         if (getArguments() != null) {
             String name = getArguments().getString("name", "Sin nombre");
+
+            // Muestra el Toast con el nombre del personaje
+            Toast.makeText(this.requireContext(),
+                    "Se ha seleccionado el personaje " + name,
+                    Toast.LENGTH_LONG).show();
+
             int imageResId = getArguments().getInt("image", -1);
             String description = getArguments().getString("description", "Sin descripción");
             String abilities = getArguments().getString("abilities", "Sin habilidades");
