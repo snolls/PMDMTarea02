@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">PMDMTarea02</string>
     <string name="about">Acerca de..</string>
+
+    <!-- Menu Drawer-->
+    <string name="settings">Configuración</string>
+    <string name="logo_menu_drawer">Logo menu Drawer</string>
+
+    <!--Settings-->
+    <string name="choose_lang">Seleccionar idioma</string>
+    <string name="switch_lang">Cambiar a Inglés</string>
+
+
+    <!--Personajes-->
+    <string name="abilitiesTV">Habilidades</string>
+    <string name="descripcionTV">Descripción</string>
     <string name="mario_name">Mario Mario</string>
     <string name="description_mario">Mario (anteriormente conocido como Jumpman, y desarrollado
         bajo el sobrenombre Sr. Video), es la mascota de Nintendo y el protagonista principal de la
@@ -25,8 +38,6 @@
         a pesar de que en la mayoría de los juegos, el salto es su principal forma de ataque.
         La principal arma de Mario es el Martillo en Donkey Kong, aunque Mario a menudo usa el
         Martillo como un arma en los juegos de rol de Mario.</string>
-    <string name="abilitiesTV">Habilidades</string>
-    <string name="descripcionTV">Descripción</string>
-    <string name="settings">Configuración</string>
-    <string name="logo_menu_drawer">Logo menu Drawer</string>
+    <string name="home">Inicio</string>
+
 </resources>
