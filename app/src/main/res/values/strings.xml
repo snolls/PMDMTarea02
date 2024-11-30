@@ -2,8 +2,31 @@
     <string name="app_name">PMDMTarea02</string>
     <string name="about">Acerca de..</string>
     <string name="mario_name">Mario Mario</string>
-    <string name="description_mario">Mario (anteriormente conocido como Jumpman, y desarrollado bajo el sobrenombre Sr. Video), es la mascota de Nintendo y el protagonista principal de la franquicia de Mario. Mario hizo su primera aparición como el protagonista del juego de arcade Donkey Kong, lanzado en 1981. Desde Super Mario Bros., sus habilidades han sido sus poderes de saltos y pisotones, con los que derrota a la mayoría de sus enemigos; y su habilidad para ganar poderes con una plétora de elementos, como el Súper Champiñon, la Flor de Fuego y la Súper Estrella. Los juegos generalmente han retratado a Mario como un personaje silencioso sin una personalidad distinta (Fortune Street es una excepción notable). De acuerdo con la filosofía de Nintendo, esto permite que Mario encaje en muchos géneros y roles diferentes. En la mayoría de los juegos, es el héroe que va en una aventura para salvar a la Princesa Peach de su archienemigo, Bowser, pero se le ha mostrado realizando muchas otras actividades además de aventurarse, como competir y hacer deportes con su hermano gemelo menor y otros.</string>
-    <string name="abilities_mario">La habilidad más notable de Mario es su Salto, que es su movimiento básico en el que confía para derrotar a los enemigos, evitar obstáculos y activar objetos útiles como Bloques ? e Interruptores P. Aunque Luigi tiene saltos superiores, Mario es más conocido. También es capaz de realizar varias maniobras acrobáticas, como el Salto largo, el Retroceso, el Salto Giro y el Salto escalada, siendo el Salto escalada una de sus habilidades más recurrentes. Mario también puede usar una variedad de ataques de artes marciales básicas, incluyendo golpes y patadas; a pesar de que en la mayoría de los juegos, el salto es su principal forma de ataque. La principal arma de Mario es el Martillo en Donkey Kong, aunque Mario a menudo usa el Martillo como un arma en los juegos de rol de Mario.</string>
+    <string name="description_mario">Mario (anteriormente conocido como Jumpman, y desarrollado
+        bajo el sobrenombre Sr. Video), es la mascota de Nintendo y el protagonista principal de la
+        franquicia de Mario. Mario hizo su primera aparición como el protagonista del juego de
+        arcade Donkey Kong, lanzado en 1981. Desde Super Mario Bros., sus habilidades han sido sus
+        poderes de saltos y pisotones, con los que derrota a la mayoría de sus enemigos; y su
+        habilidad para ganar poderes con una plétora de elementos, como el Súper Champiñon,
+        la Flor de Fuego y la Súper Estrella. Los juegos generalmente han retratado a Mario
+        como un personaje silencioso sin una personalidad distinta (Fortune Street es una
+        excepción notable). De acuerdo con la filosofía de Nintendo, esto permite que Mario
+        encaje en muchos géneros y roles diferentes. En la mayoría de los juegos, es el héroe que
+        va en una aventura para salvar a la Princesa Peach de su archienemigo, Bowser, pero se le
+        ha mostrado realizando muchas otras actividades además de aventurarse, como competir y hacer
+        deportes con su hermano gemelo menor y otros.</string>
+    <string name="abilities_mario">La habilidad más notable de Mario es su Salto, que es su
+        movimiento básico en el que confía para derrotar a los enemigos, evitar obstáculos y
+        activar objetos útiles como Bloques ? e Interruptores P. Aunque Luigi tiene saltos
+        superiores, Mario es más conocido. También es capaz de realizar varias maniobras
+        acrobáticas, como el Salto largo, el Retroceso, el Salto Giro y el Salto escalada,
+        siendo el Salto escalada una de sus habilidades más recurrentes. Mario también puede
+        usar una variedad de ataques de artes marciales básicas, incluyendo golpes y patadas;
+        a pesar de que en la mayoría de los juegos, el salto es su principal forma de ataque.
+        La principal arma de Mario es el Martillo en Donkey Kong, aunque Mario a menudo usa el
+        Martillo como un arma en los juegos de rol de Mario.</string>
     <string name="abilitiesTV">Habilidades</string>
     <string name="descripcionTV">Descripción</string>
+    <string name="settings">Configuración</string>
+    <string name="logo_menu_drawer">Logo menu Drawer</string>
 </resources>

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private NavHostFragment navHostFragment;
     private NavController navController;
+    private DrawerLayout drawerLayout;
+    private AppBarConfiguration appBarConfiguration;
 
 
     @Override
@@ -32,15 +35,33 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        // Configurar Toolbar
         setSupportActionBar(binding.toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        // Obtener NavController y DrawerLayout
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         navController = navHostFragment.getNavController();
+        drawerLayout = binding.drawerLayout;
 
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        // Configurar AppBarConfiguration
+        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
+                .setOpenableLayout(drawerLayout) // Vincular el DrawerLayout
+                .build();
+
+        // Vincular Toolbar con NavController y AppBarConfiguration
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration);
+
+        // Configurar NavigationView con NavController
+        NavigationUI.setupWithNavController(binding.navView, navController);
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
