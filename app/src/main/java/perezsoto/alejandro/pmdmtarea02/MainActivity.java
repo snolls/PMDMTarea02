@@ -1,7 +1,6 @@
 package perezsoto.alejandro.pmdmtarea02;
 
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +13,6 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import java.util.Locale;
 
 import perezsoto.alejandro.pmdmtarea02.databinding.ActivityMainBinding;
 
@@ -29,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Cargar idioma antes de inicializar la actividad
-        loadLanguage();
 
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -62,26 +58,12 @@ public class MainActivity extends AppCompatActivity {
                 navController.navigate(R.id.mainFragment);
             } else if (item.getItemId() == R.id.nav_settings) {
                 navController.navigate(R.id.settingsFragment); // Abrir el fragmento de configuración
-            } else {
-                throw new IllegalStateException("Unexpected value: " + item.getItemId());
             }
 
             // Cerrar el Drawer después de la selección
             drawerLayout.closeDrawers();
             return true;
         });
-    }
-
-    private void loadLanguage() {
-
-        SharedPreferences preferences = getSharedPreferences("app_preferences", MODE_PRIVATE);
-        String language = preferences.getString("language", "es"); // "es" por defecto
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-
-        Configuration config = new Configuration();
-        config.setLocale(locale);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
     @Override
