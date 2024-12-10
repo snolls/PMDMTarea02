@@ -1,6 +1,9 @@
 package perezsoto.alejandro.pmdmtarea02;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +17,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 
+import java.util.Locale;
+
 import perezsoto.alejandro.pmdmtarea02.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,9 +29,15 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private AppBarConfiguration appBarConfiguration;
 
+    private static final String PREFS_NAME = "AppPrefs";
+    private static final String LANGUAGE_KEY = "language";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Cargar idioma desde SharedPreferences antes de establecer el diseño
+        loadLanguagePreference();
 
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -64,6 +75,26 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.closeDrawers();
             return true;
         });
+    }
+
+    /**
+     * Carga el idioma almacenado en SharedPreferences.
+     */
+    private void loadLanguagePreference() {
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String languageCode = prefs.getString(LANGUAGE_KEY, "es"); // Español por defecto
+        setLocale(languageCode);
+    }
+
+    /**
+     * Configura la aplicación para usar el idioma seleccionado.
+     */
+    private void setLocale(String languageCode) {
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
     @Override

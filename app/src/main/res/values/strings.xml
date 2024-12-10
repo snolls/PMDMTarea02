@@ -4,6 +4,7 @@
 
     <!-- Menu Drawer-->
     <string name="settings">Configuración</string>
+    <string name="home">Inicio</string>
     <string name="logo_menu_drawer">Logo menu Drawer</string>
 
     <!--Settings-->
@@ -38,6 +39,6 @@
         a pesar de que en la mayoría de los juegos, el salto es su principal forma de ataque.
         La principal arma de Mario es el Martillo en Donkey Kong, aunque Mario a menudo usa el
         Martillo como un arma en los juegos de rol de Mario.</string>
-    <string name="home">Inicio</string>
+
 
 </resources>

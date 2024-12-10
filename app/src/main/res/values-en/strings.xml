@@ -4,7 +4,7 @@
     <string name="about">About..</string>
 
     <!-- Menu Drawer-->
-    <string name="settings">Configuración</string>
+    <string name="settings">Configuration</string>
     <string name="home">Home</string>
     <string name="logo_menu_drawer">Logo menu Drawer</string>
 
@@ -14,8 +14,8 @@
 
 
     <!--Personajes-->
-    <string name="abilitiesTV">Habilidades</string>
-    <string name="descripcionTV">Descripción</string>
+    <string name="abilitiesTV">Abilities</string>
+    <string name="descripcionTV">Description</string>
     <string name="mario_name">Mario Mario</string>
     <string name="description_mario">Mario (anteriormente conocido como Jumpman, y desarrollado
         bajo el sobrenombre Sr. Video), es la mascota de Nintendo y el protagonista principal de la
