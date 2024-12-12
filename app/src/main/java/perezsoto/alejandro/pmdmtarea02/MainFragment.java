@@ -70,12 +70,12 @@ public class MainFragment extends Fragment {
 
         itemList = new ArrayList<>();
         itemList.add(new Item(getString(R.string.mario_name), R.drawable.mario, getString(R.string.description_mario), getString(R.string.abilities_mario)));
-        itemList.add(new Item("Luigi Mario", R.drawable.luigi, "Description 2", "Abilities 2"));
-        itemList.add(new Item("Princesa Peach", R.drawable.peach, "Description 1", "Abilities 1"));
-        itemList.add(new Item("Yoshi", R.drawable.yoshi, "Description 2", "Abilities 2"));
-        itemList.add(new Item("Toad", R.drawable.toad, "Description 1", "Abilities 1"));
-        itemList.add(new Item("Waluigi", R.drawable.waluigi, "Description 2", "Abilities 2"));
-        itemList.add(new Item("Warrio", R.drawable.warrio, "Description 1", "Abilities 1"));
+        itemList.add(new Item(getString(R.string.luigi_name), R.drawable.luigi, getString(R.string.description_luigi), getString(R.string.abilities_luigi)));
+        itemList.add(new Item(getString(R.string.peach_name), R.drawable.peach, getString(R.string.description_peach), getString(R.string.abilities_peach)));
+        itemList.add(new Item(getString(R.string.yoshi_name), R.drawable.yoshi, getString(R.string.description_yoshi), getString(R.string.abilities_yoshi)));
+        itemList.add(new Item(getString(R.string.toad_name), R.drawable.toad, getString(R.string.description_toad), getString(R.string.abilities_toad)));
+        itemList.add(new Item(getString(R.string.waluigi_name), R.drawable.waluigi, getString(R.string.description_waluigi), getString(R.string.abilities_waluigi)));
+        itemList.add(new Item(getString(R.string.warrio_name), R.drawable.warrio, getString(R.string.description_warrio), getString(R.string.abilities_warrio)));
 
     }
 
