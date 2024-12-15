@@ -24,7 +24,6 @@ import perezsoto.alejandro.pmdmtarea02.databinding.ActivityMainBinding;
  * Se encarga de gestionar la navegación entre fragmentos y la configuración del idioma de la aplicación.
  */
 public class MainActivity extends AppCompatActivity {
-
     private ActivityMainBinding binding;
     private NavHostFragment navHostFragment;
     private NavController navController;
