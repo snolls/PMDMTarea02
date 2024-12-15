@@ -17,6 +17,10 @@ import java.util.Locale;
 
 import perezsoto.alejandro.pmdmtarea02.databinding.FragmentSettingsBinding;
 
+/**
+ * La clase SettingsFragment permite al usuario configurar las preferencias de la aplicación.
+ * En esta clase, los usuarios pueden cambiar el idioma de la aplicación.
+ */
 public class SettingsFragment extends Fragment {
 
     private static final String PREFS_NAME = "AppPrefs";
@@ -24,13 +28,26 @@ public class SettingsFragment extends Fragment {
 
     private FragmentSettingsBinding binding;
 
+    /**
+     * Infla la vista para el fragmento de configuración.
+     *
+     * @param inflater Objeto LayoutInflater para inflar la vista.
+     * @param container ViewGroup que contiene la vista.
+     * @param savedInstanceState Bundle que contiene el estado guardado de la vista.
+     * @return La vista inflada del fragmento.
+     */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inicializar el ViewBinding
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
+    /**
+     * Se ejecuta cuando la vista ha sido creada.
+     *
+     * @param view La vista creada para el fragmento.
+     * @param savedInstanceState Bundle con el estado guardado de la vista.
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -44,6 +61,12 @@ public class SettingsFragment extends Fragment {
 
         // Escuchar cambios en el SwitchCompat
         binding.switchLanguage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            /**
+             * Controla los cambios en el SwitchCompat para cambiar el idioma de la aplicación.
+             *
+             * @param buttonView El SwitchCompat que se ha pulsado.
+             * @param isChecked Indica si el SwitchCompat está activado o desactivado.
+             */
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
@@ -57,6 +80,8 @@ public class SettingsFragment extends Fragment {
 
     /**
      * Cambia el idioma de la aplicación y reinicia la actividad principal para aplicar los cambios.
+     *
+     * @param languageCode El código de idioma que se aplicará (por ejemplo, "es" para español, "en" para inglés).
      */
     private void changeLanguage(String languageCode) {
         // Guardar el idioma en SharedPreferences
@@ -74,6 +99,8 @@ public class SettingsFragment extends Fragment {
 
     /**
      * Establece la configuración de idioma para la aplicación.
+     *
+     * @param languageCode El código de idioma que se aplicará.
      */
     private void setLocale(String languageCode) {
         Locale locale = new Locale(languageCode);
@@ -83,6 +110,9 @@ public class SettingsFragment extends Fragment {
         requireActivity().getResources().updateConfiguration(config, requireActivity().getResources().getDisplayMetrics());
     }
 
+    /**
+     * Se llama cuando la vista del fragmento se destruye.
+     */
     @Override
     public void onDestroyView() {
         super.onDestroyView();

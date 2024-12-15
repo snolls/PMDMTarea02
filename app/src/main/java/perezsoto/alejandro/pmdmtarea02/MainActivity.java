@@ -1,6 +1,5 @@
 package perezsoto.alejandro.pmdmtarea02;
 
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -16,11 +15,14 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-
 import java.util.Locale;
 
 import perezsoto.alejandro.pmdmtarea02.databinding.ActivityMainBinding;
 
+/**
+ * La clase MainActivity representa la actividad principal de la aplicación.
+ * Se encarga de gestionar la navegación entre fragmentos y la configuración del idioma de la aplicación.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -32,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
     private static final String PREFS_NAME = "AppPrefs";
     private static final String LANGUAGE_KEY = "language";
 
-
+    /**
+     * Método onCreate que se ejecuta cuando se crea la actividad.
+     *
+     * @param savedInstanceState Bundle que contiene el estado guardado de la actividad.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -88,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Configura la aplicación para usar el idioma seleccionado.
+     *
+     * @param languageCode El código de idioma a utilizar (por ejemplo, "es" para español, "en" para inglés).
      */
     private void setLocale(String languageCode) {
         Locale locale = new Locale(languageCode);
@@ -97,17 +105,34 @@ public class MainActivity extends AppCompatActivity {
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
+    /**
+     * Método que permite la navegación hacia arriba en la jerarquía de la aplicación.
+     *
+     * @return true si la navegación hacia arriba fue exitosa, de lo contrario llama al método de la superclase.
+     */
     @Override
     public boolean onSupportNavigateUp() {
         return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
     }
 
+    /**
+     * Infla el menú de opciones cuando la actividad se crea.
+     *
+     * @param menu El objeto Menu donde se agregarán los elementos de menú.
+     * @return true para mostrar el menú; de lo contrario, false.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu); // Infla el archivo de menú
         return true;
     }
 
+    /**
+     * Maneja las selecciones de los elementos del menú de opciones.
+     *
+     * @param item El elemento de menú seleccionado.
+     * @return true si la acción fue manejada correctamente; de lo contrario, llama al método de la superclase.
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.menu_about) { // El ID del ítem "Acerca de..."
@@ -117,7 +142,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    // Método para mostrar el AlertDialog
+    /**
+     * Muestra un diálogo de "Acerca de" con información de la aplicación.
+     */
     private void showAboutDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Acerca de")
